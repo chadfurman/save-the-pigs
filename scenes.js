@@ -33,10 +33,10 @@ Crafty.scene('Game', function() {
   }
 
   // Generate up to five villages on the map in random locations
-  var max_villages = 5;
+  var max_villages = 50;
   for (var x = 0; x < Game.map_grid.width; x++) {
     for (var y = 0; y < Game.map_grid.height; y++) {
-      if (Math.random() < 0.02) {
+      if (Math.random() < 0.20) {
         if (Crafty('Village').length < max_villages && !this.occupied[x][y]) {
           Crafty.e('Village').at(x, y);
         }
@@ -91,7 +91,12 @@ Crafty.scene('Loading', function(){
     .css($text_css);
 
   // Load our sprite map image
-  Crafty.load(['stp.png'], function(){
+  Crafty.load([
+    'stp.png',
+    'oink.mp3',
+    'oink.wav',
+    'oink.ogg'
+   ], function(){
     // Once the image is loaded...
 
     // Define the individual sprites in the image
@@ -107,7 +112,12 @@ Crafty.scene('Loading', function(){
       spr_player:  [0, 1]
     }, 0, 0, 1);
 
-
+     // Define our sounds for later use
+    Crafty.audio.add({
+      oink: ['oink.mp3',
+              'oink.ogg',
+              'oink.wavs']
+    });
     // Now that our sprites are ready to draw, start the game
     Crafty.scene('Game');
   })
