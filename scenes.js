@@ -94,7 +94,7 @@ Crafty.scene('Loading', function(){
 
   // Load our sprite map image
   Crafty.load([
-    'stp.png',
+    'stp_64.png',
     'oink.mp3',
     'oink.wav',
     'oink.ogg'
@@ -106,7 +106,7 @@ Crafty.scene('Loading', function(){
     // These components' names are prefixed with "spr_"
     //  to remind us that they simply cause the entity
     //  to be drawn with a certain sprite
-    Crafty.sprite(16, 'stp.png', {
+    Crafty.sprite(32, 'stp_64.png', {
       spr_tree:    [1, 1],
       spr_bush:    [0, 0],
       spr_pig: [1, 0],
