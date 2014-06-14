@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://jsfiddle.net/darrentorpey/CrtcJ/7/embedded/ -->
+<html slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+
+		
+			<script type="text/javascript" src="moo-clientcide-1.3.js"></script><style type="text/css"></style>
+
+		
+
+		<script type="text/javascript" src="rainbow-custom.min.js"></script>
+
+		<script type="text/javascript" src="embeddable.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="twilight-contrast.css">
+
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+
+
+		
+
+		
+			<link rel="stylesheet" type="text/css" href="embedded-light.css">
+
+		
+
+		<script type="text/javascript">
+			var height,
+				force_height = null,
+				show_src = "http://fiddle.jshell.net/darrentorpey/CrtcJ/7/show/light/",
+				resize_element_counter = 0,
+				shell_edit_url = '/darrentorpey/CrtcJ/7/light/';
+
+			
+		</script>
+	<style id="defaultStickyWinStyle">div.DefaultStickyWin {font-family:verdana; font-size:11px; line-height: 13px;position: relative;}div.DefaultStickyWin div.top{-moz-user-select: none;-khtml-user-select: none;}div.DefaultStickyWin div.top_ul{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) top left no-repeat; height:30px; width:15px; float:left}div.DefaultStickyWin div.top_ur{position:relative; left:0px !important; left:-4px; background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) top right !important; height:30px; margin:0px 0px 0px 15px !important; margin-right:-4px; padding:0px}div.DefaultStickyWin h1.caption{clear: none !important; margin:0px !important; overflow: hidden; padding:0 !important; font-weight:bold; color:#555; font-size:14px !important; position:relative; top:8px !important; left:5px !important; float: left; height: 22px !important;}div.DefaultStickyWin div.middle, div.DefaultStickyWin div.closeBody {background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/body.png) top left repeat-y; margin:0px 20px 0px 0px !important;	margin-bottom: -3px; position: relative;	top: 0px !important; top: -3px;}div.DefaultStickyWin div.body{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/body.png) top right repeat-y; padding:8px 23px 8px 0px !important; margin-left:5px !important; position:relative; right:-20px !important; z-index: 1;}div.DefaultStickyWin div.bottom{clear:both;}div.DefaultStickyWin div.bottom_ll{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) bottom left no-repeat; width:15px; height:15px; float:left}div.DefaultStickyWin div.bottom_lr{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/full.png) bottom right; position:relative; left:0px !important; left:-4px; margin:0px 0px 0px 15px !important; margin-right:-4px; height:15px}div.DefaultStickyWin div.closeButtons{text-align: center; background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/body.png) top right repeat-y; padding: 4px 30px 8px 0px; margin-left:5px; position:relative; right:-20px}div.DefaultStickyWin a.button:hover{background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/big_button_over.gif) repeat-x}div.DefaultStickyWin a.button {background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/big_button.gif) repeat-x; margin: 2px 8px 2px 8px; padding: 2px 12px; cursor:pointer; border: 1px solid #999 !important; text-decoration:none; color: #000 !important;}div.DefaultStickyWin div.closeButton{width:13px; height:13px; background:url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/closebtn.gif) no-repeat; position: absolute; right: 0px; margin:10px 15px 0px 0px !important; cursor:pointer;top:0px}div.DefaultStickyWin div.dragHandle {	width: 11px;	height: 25px;	position: relative;	top: 5px;	left: -3px;	cursor: move;	background: url(http://github.com/anutron/clientcide/raw/master/Assets/stickyWinHTML/drag_corner.gif); float: left;}</style></head>
+	<body>
+		<div id="wrapper">
+			<div id="head">
+				<h1><a title="Edit in JSFiddle" href="http://jsfiddle.net/darrentorpey/CrtcJ/7/light/" target="new">Edit in JSFiddle</a></h1>
+				<div id="actions" class="">
+					<ul class="normalRes">
+						
+							<li class="active">
+								<a title="JavaScript" data-trigger-type="js" href="http://jsfiddle.net/darrentorpey/CrtcJ/7/embedded/#JavaScript">JavaScript</a>
+							</li>
+						
+							<li class="">
+								<a title="Resources" data-trigger-type="resources" href="http://jsfiddle.net/darrentorpey/CrtcJ/7/embedded/#Resources">Resources</a>
+							</li>
+						
+							<li class="">
+								<a title="HTML" data-trigger-type="html" href="http://jsfiddle.net/darrentorpey/CrtcJ/7/embedded/#HTML">HTML</a>
+							</li>
+						
+							<li class="">
+								<a title="CSS" data-trigger-type="css" href="http://jsfiddle.net/darrentorpey/CrtcJ/7/embedded/#CSS">CSS</a>
+							</li>
+						
+							<li class="">
+								<a title="Result" data-trigger-type="result" href="http://jsfiddle.net/darrentorpey/CrtcJ/7/embedded/#Result">Result</a>
+							</li>
+						
+					</ul>
+
+					<select class="lowRes">
+						
+							<option data-trigger-type="js" selected="selected">JavaScript</option>
+						
+							<option data-trigger-type="resources">Resources</option>
+						
+							<option data-trigger-type="html">HTML</option>
+						
+							<option data-trigger-type="css">CSS</option>
+						
+							<option data-trigger-type="result">Result</option>
+						
+					</select>
+				</div>
+			</div>
+
+			<div id="tabs" style="height: 318px;">
+				
+					
+						
+							<pre data-language="js" class="js tCont rainbow active">Game <span class="keyword operator">=</span> {
+	<span class="comment">// This defines our grid's size and the size of each of its tiles</span>
+	map_grid: {
+		width:  <span class="constant numeric">24</span>,
+		height: <span class="constant numeric">16</span>,
+		tile: {
+			width:  <span class="constant numeric">16</span>,
+			height: <span class="constant numeric">16</span>
+		}
+	},
+
+	<span class="comment">// The total width of the game screen. Since our grid takes up the entire screen</span>
+	<span class="comment">//  this is just the width of a tile times the width of the grid</span>
+	width: <span class="keyword">function</span>() {
+		<span class="keyword">return</span> <span class="keyword">this</span>.map_grid.width <span class="keyword operator">*</span> <span class="keyword">this</span>.map_grid.tile.width;
+	},
+
+	<span class="comment">// The total height of the game screen. Since our grid takes up the entire screen</span>
+	<span class="comment">//  this is just the height of a tile times the height of the grid</span>
+	height: <span class="keyword">function</span>() {
+		<span class="keyword">return</span> <span class="keyword">this</span>.map_grid.height <span class="keyword operator">*</span> <span class="keyword">this</span>.map_grid.tile.height;
+	},
+
+	<span class="comment">// Initialize and start our game</span>
+	start: <span class="keyword">function</span>() {
+		<span class="comment">// Start crafty and set a background color so that we can see it's working</span>
+		Crafty.<span class="function call">init</span>(Game.<span class="function call">width</span>(), Game.<span class="function call">height</span>());
+		Crafty.<span class="function call">background</span>(<span class="string">'rgb(87, 109, 20)'</span>);
+
+		<span class="comment">// Simply start the "Loading" scene to get things going</span>
+		Crafty.<span class="function call">scene</span>(<span class="string">'Loading'</span>);
+	}
+}
+
+<span class="comment">// The Grid component allows an element to be located</span>
+<span class="comment">//  on a grid of tiles</span>
+Crafty.<span class="function call">c</span>(<span class="string">'Grid'</span>, {
+	init: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">attr</span>({
+			w: Game.map_grid.tile.width,
+			h: Game.map_grid.tile.height
+		})
+	},
+
+	<span class="comment">// Locate this entity at the given position on the grid</span>
+	at: <span class="keyword">function</span>(x, y) {
+		<span class="keyword">if</span> (x <span class="keyword operator">=</span><span class="keyword operator">=</span><span class="keyword operator">=</span> undefined <span class="keyword operator">&amp;</span><span class="keyword operator">&amp;</span> y <span class="keyword operator">=</span><span class="keyword operator">=</span><span class="keyword operator">=</span> undefined) {
+			<span class="keyword">return</span> { x: <span class="keyword">this</span>.x/Game.map_grid.tile.width, y: <span class="keyword">this</span>.y/Game.map_grid.tile.height }
+		} <span class="keyword">else</span> {
+			<span class="keyword">this</span>.<span class="function call">attr</span>({ x: x <span class="keyword operator">*</span> Game.map_grid.tile.width, y: y <span class="keyword operator">*</span> Game.map_grid.tile.height });
+			<span class="keyword">return</span> <span class="keyword">this</span>;
+		}
+	}
+});
+
+<span class="comment">// An "Actor" is an entity that is drawn in 2D on canvas</span>
+<span class="comment">//  via our logical coordinate grid</span>
+Crafty.<span class="function call">c</span>(<span class="string">'Actor'</span>, {
+	init: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">requires</span>(<span class="string">'2D, Canvas, Grid'</span>);
+	},
+});
+
+<span class="comment">// A Tree is just an Actor with a certain color</span>
+Crafty.<span class="function call">c</span>(<span class="string">'Tree'</span>, {
+	init: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">requires</span>(<span class="string">'Actor, Solid, spr_tree'</span>);
+	},
+});
+
+<span class="comment">// A Bush is just an Actor with a certain color</span>
+Crafty.<span class="function call">c</span>(<span class="string">'Bush'</span>, {
+	init: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">requires</span>(<span class="string">'Actor, Solid, spr_bush'</span>);
+	},
+});
+
+<span class="comment">// This is the player-controlled character</span>
+Crafty.<span class="function call">c</span>(<span class="string">'PlayerCharacter'</span>, {
+	init: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">requires</span>(<span class="string">'Actor, Fourway, Collision, spr_player, SpriteAnimation'</span>)
+			.<span class="function call">fourway</span>(<span class="constant numeric">4</span>)
+			.<span class="function call">stopOnSolids</span>()
+			.<span class="function call">onHit</span>(<span class="string">'Village'</span>, <span class="keyword">this</span>.visitVillage)
+			<span class="comment">// These next lines define our four animations</span>
+			<span class="comment">//  each call to .animate specifies:</span>
+			<span class="comment">//  - the name of the animation</span>
+			<span class="comment">//  - the x and y coordinates within the sprite</span>
+			<span class="comment">//     map at which the animation set begins</span>
+			<span class="comment">//  - the number of animation frames *in addition to* the first one</span>
+			.<span class="function call">animate</span>(<span class="string">'PlayerMovingUp'</span>,    <span class="constant numeric">0</span>, <span class="constant numeric">0</span>, <span class="constant numeric">2</span>)
+			.<span class="function call">animate</span>(<span class="string">'PlayerMovingRight'</span>, <span class="constant numeric">0</span>, <span class="constant numeric">1</span>, <span class="constant numeric">2</span>)
+			.<span class="function call">animate</span>(<span class="string">'PlayerMovingDown'</span>,  <span class="constant numeric">0</span>, <span class="constant numeric">2</span>, <span class="constant numeric">2</span>)
+			.<span class="function call">animate</span>(<span class="string">'PlayerMovingLeft'</span>,  <span class="constant numeric">0</span>, <span class="constant numeric">3</span>, <span class="constant numeric">2</span>);
+
+		<span class="comment">// Watch for a change of direction and switch animations accordingly</span>
+		<span class="keyword">var</span> animation_speed <span class="keyword operator">=</span> <span class="constant numeric">8</span>;
+		<span class="keyword">this</span>.<span class="function call">bind</span>(<span class="string">'NewDirection'</span>, <span class="keyword">function</span>(data) {
+			<span class="keyword">if</span> (data.x <span class="keyword operator">&gt;</span> <span class="constant numeric">0</span>) {
+				<span class="keyword">this</span>.<span class="function call">animate</span>(<span class="string">'PlayerMovingRight'</span>, animation_speed, <span class="keyword operator">-</span><span class="constant numeric">1</span>);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (data.x <span class="keyword operator">&lt;</span> <span class="constant numeric">0</span>) {
+				<span class="keyword">this</span>.<span class="function call">animate</span>(<span class="string">'PlayerMovingLeft'</span>, animation_speed, <span class="keyword operator">-</span><span class="constant numeric">1</span>);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (data.y <span class="keyword operator">&gt;</span> <span class="constant numeric">0</span>) {
+				<span class="keyword">this</span>.<span class="function call">animate</span>(<span class="string">'PlayerMovingDown'</span>, animation_speed, <span class="keyword operator">-</span><span class="constant numeric">1</span>);
+			} <span class="keyword">else</span> <span class="keyword">if</span> (data.y <span class="keyword operator">&lt;</span> <span class="constant numeric">0</span>) {
+				<span class="keyword">this</span>.<span class="function call">animate</span>(<span class="string">'PlayerMovingUp'</span>, animation_speed, <span class="keyword operator">-</span><span class="constant numeric">1</span>);
+			} <span class="keyword">else</span> {
+				<span class="keyword">this</span>.<span class="function call">stop</span>();
+			}
+		});
+	},
+
+	<span class="comment">// Registers a stop-movement function to be called when</span>
+	<span class="comment">//  this entity hits an entity with the "Solid" component</span>
+	stopOnSolids: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">onHit</span>(<span class="string">'Solid'</span>, <span class="keyword">this</span>.stopMovement);
+
+		<span class="keyword">return</span> <span class="keyword">this</span>;
+	},
+
+	<span class="comment">// Stops the movement</span>
+	stopMovement: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>._speed <span class="keyword operator">=</span> <span class="constant numeric">0</span>;
+		<span class="keyword">if</span> (<span class="keyword">this</span>._movement) {
+			<span class="keyword">this</span>.x <span class="keyword operator">-</span><span class="keyword operator">=</span> <span class="keyword">this</span>._movement.x;
+			<span class="keyword">this</span>.y <span class="keyword operator">-</span><span class="keyword operator">=</span> <span class="keyword">this</span>._movement.y;
+		}
+	},
+
+	<span class="comment">// Respond to this player visiting a village</span>
+	visitVillage: <span class="keyword">function</span>(data) {
+		villlage <span class="keyword operator">=</span> data[<span class="constant numeric">0</span>].obj;
+		villlage.<span class="function call">visit</span>();
+	}
+});
+
+<span class="comment">// A village is a tile on the grid that the PC must visit in order to win the game</span>
+Crafty.<span class="function call">c</span>(<span class="string">'Village'</span>, {
+	init: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">requires</span>(<span class="string">'Actor, spr_village'</span>);
+	},
+
+	<span class="comment">// Process a visitation with this village</span>
+	visit: <span class="keyword">function</span>() {
+		<span class="keyword">this</span>.<span class="function call">destroy</span>();
+		Crafty.audio.<span class="function call">play</span>(<span class="string">'knock'</span>);
+		Crafty.<span class="function call">trigger</span>(<span class="string">'VillageVisited'</span>, <span class="keyword">this</span>);
+	}
+});
+
+<span class="comment">// Game scene</span>
+<span class="comment">// -------------</span>
+<span class="comment">// Runs the core gameplay loop</span>
+Crafty.<span class="function call">scene</span>(<span class="string">'Game'</span>, <span class="keyword">function</span>() {
+	<span class="comment">// A 2D array to keep track of all occupied tiles</span>
+	<span class="keyword">this</span>.occupied <span class="keyword operator">=</span> <span class="keyword">new</span> <span class="keyword">Array</span>(Game.map_grid.width);
+	<span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword operator">=</span> <span class="constant numeric">0</span>; i <span class="keyword operator">&lt;</span> Game.map_grid.width; i<span class="keyword operator">+</span><span class="keyword operator">+</span>) {
+		<span class="keyword">this</span>.occupied[i] <span class="keyword operator">=</span> <span class="keyword">new</span> <span class="keyword">Array</span>(Game.map_grid.height);
+		<span class="keyword">for</span> (<span class="keyword">var</span> y <span class="keyword operator">=</span> <span class="constant numeric">0</span>; y <span class="keyword operator">&lt;</span> Game.map_grid.height; y<span class="keyword operator">+</span><span class="keyword operator">+</span>) {
+			<span class="keyword">this</span>.occupied[i][y] <span class="keyword operator">=</span> <span class="constant language">false</span>;
+		}
+	}
+
+	<span class="comment">// Player character, placed at 5, 5 on our grid</span>
+	<span class="keyword">this</span>.player <span class="keyword operator">=</span> Crafty.<span class="function call">e</span>(<span class="string">'PlayerCharacter'</span>).<span class="function call">at</span>(<span class="constant numeric">5</span>, <span class="constant numeric">5</span>);
+	<span class="keyword">this</span>.occupied[<span class="keyword">this</span>.player.<span class="function call">at</span>().x][<span class="keyword">this</span>.player.<span class="function call">at</span>().y] <span class="keyword operator">=</span> <span class="constant language">true</span>;
+
+	<span class="comment">// Place a tree at every edge square on our grid of 16x16 tiles</span>
+	<span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword operator">=</span> <span class="constant numeric">0</span>; x <span class="keyword operator">&lt;</span> Game.map_grid.width; x<span class="keyword operator">+</span><span class="keyword operator">+</span>) {
+		<span class="keyword">for</span> (<span class="keyword">var</span> y <span class="keyword operator">=</span> <span class="constant numeric">0</span>; y <span class="keyword operator">&lt;</span> Game.map_grid.height; y<span class="keyword operator">+</span><span class="keyword operator">+</span>) {
+			<span class="keyword">var</span> at_edge <span class="keyword operator">=</span> x <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant numeric">0</span> <span class="keyword operator">|</span><span class="keyword operator">|</span> x <span class="keyword operator">=</span><span class="keyword operator">=</span> Game.map_grid.width <span class="keyword operator">-</span> <span class="constant numeric">1</span> <span class="keyword operator">|</span><span class="keyword operator">|</span> y <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant numeric">0</span> <span class="keyword operator">|</span><span class="keyword operator">|</span> y <span class="keyword operator">=</span><span class="keyword operator">=</span> Game.map_grid.height <span class="keyword operator">-</span> <span class="constant numeric">1</span>;
+
+			<span class="keyword">if</span> (at_edge) {
+				<span class="comment">// Place a tree entity at the current tile</span>
+				Crafty.<span class="function call">e</span>(<span class="string">'Tree'</span>).<span class="function call">at</span>(x, y);
+				<span class="keyword">this</span>.occupied[x][y] <span class="keyword operator">=</span> <span class="constant language">true</span>;
+			} <span class="keyword">else</span> <span class="keyword">if</span> (Math.<span class="function call">random</span>() <span class="keyword operator">&lt;</span> <span class="constant numeric">0.06</span> <span class="keyword operator">&amp;</span><span class="keyword operator">&amp;</span> <span class="keyword operator">!</span><span class="keyword">this</span>.occupied[x][y]) {
+				<span class="comment">// Place a bush entity at the current tile</span>
+				Crafty.<span class="function call">e</span>(<span class="string">'Bush'</span>).<span class="function call">at</span>(x, y);
+				<span class="keyword">this</span>.occupied[x][y] <span class="keyword operator">=</span> <span class="constant language">true</span>;
+			}
+		}
+	}
+
+	<span class="comment">// Generate up to five villages on the map in random locations</span>
+	<span class="keyword">var</span> max_villages <span class="keyword operator">=</span> <span class="constant numeric">5</span>;
+	<span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword operator">=</span> <span class="constant numeric">0</span>; x <span class="keyword operator">&lt;</span> Game.map_grid.width; x<span class="keyword operator">+</span><span class="keyword operator">+</span>) {
+		<span class="keyword">for</span> (<span class="keyword">var</span> y <span class="keyword operator">=</span> <span class="constant numeric">0</span>; y <span class="keyword operator">&lt;</span> Game.map_grid.height; y<span class="keyword operator">+</span><span class="keyword operator">+</span>) {
+			<span class="keyword">if</span> (Math.<span class="function call">random</span>() <span class="keyword operator">&lt;</span> <span class="constant numeric">0.02</span>) {
+				<span class="keyword">if</span> (<span class="function call">Crafty</span>(<span class="string">'Village'</span>).length <span class="keyword operator">&lt;</span> max_villages <span class="keyword operator">&amp;</span><span class="keyword operator">&amp;</span> <span class="keyword operator">!</span><span class="keyword">this</span>.occupied[x][y]) {
+					Crafty.<span class="function call">e</span>(<span class="string">'Village'</span>).<span class="function call">at</span>(x, y);
+				}
+			}
+		}
+	}
+
+	<span class="comment">// Show the victory screen once all villages are visisted</span>
+	<span class="keyword">this</span>.show_victory <span class="keyword operator">=</span> <span class="keyword">this</span>.<span class="function call">bind</span>(<span class="string">'VillageVisited'</span>, <span class="keyword">function</span>() {
+		<span class="keyword">if</span> (<span class="keyword operator">!</span><span class="function call">Crafty</span>(<span class="string">'Village'</span>).length) {
+			Crafty.<span class="function call">scene</span>(<span class="string">'Victory'</span>);
+		}
+	});
+}, <span class="keyword">function</span>() {
+	<span class="comment">// Remove our event binding from above so that we don't</span>
+	<span class="comment">//  end up having multiple redundant event watchers after</span>
+	<span class="comment">//  multiple restarts of the game</span>
+	<span class="keyword">this</span>.<span class="function call">unbind</span>(<span class="string">'VillageVisited'</span>, <span class="keyword">this</span>.show_victory);
+});
+
+
+<span class="comment">// Victory scene</span>
+<span class="comment">// -------------</span>
+<span class="comment">// Tells the player when they've won and lets them start a new game</span>
+Crafty.<span class="function call">scene</span>(<span class="string">'Victory'</span>, <span class="keyword">function</span>() {
+	<span class="comment">// Display some text in celebration of the victory</span>
+	Crafty.<span class="function call">e</span>(<span class="string">'2D, DOM, Text'</span>)
+		.<span class="function call">attr</span>({ x: <span class="constant numeric">0</span>, y: <span class="constant numeric">0</span> })
+		.<span class="function call">text</span>(<span class="string">'Victory!'</span>);
+
+	<span class="comment">// Watch for the player to press a key, then restart the game</span>
+	<span class="comment">//  when a key is pressed</span>
+	<span class="keyword">this</span>.restart_game <span class="keyword operator">=</span> <span class="keyword">this</span>.<span class="function call">bind</span>(<span class="string">'KeyDown'</span>, <span class="keyword">function</span>() {
+		Crafty.<span class="function call">scene</span>(<span class="string">'Game'</span>);
+	});
+}, <span class="keyword">function</span>() {
+	<span class="comment">// Remove our event binding from above so that we don't</span>
+	<span class="comment">//  end up having multiple redundant event watchers after</span>
+	<span class="comment">//  multiple restarts of the game</span>
+	<span class="keyword">this</span>.<span class="function call">unbind</span>(<span class="string">'KeyDown'</span>, <span class="keyword">this</span>.restart_game);
+});
+
+<span class="comment">// Loading scene</span>
+<span class="comment">// -------------</span>
+<span class="comment">// Handles the loading of binary assets such as images and audio files</span>
+Crafty.<span class="function call">scene</span>(<span class="string">'Loading'</span>, <span class="keyword">function</span>(){
+	<span class="comment">// Load our sprite map image</span>
+	Crafty.<span class="function call">load</span>([<span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/16x16_forest_1.gif'</span>, <span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/hunter.png'</span>, <span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/door_knock_3x.mp3'</span>, <span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/door_knock_3x.ogg'</span>, <span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/door_knock_3x.aac'</span>], <span class="keyword">function</span>(){
+		<span class="comment">// Once the images are loaded...</span>
+
+		<span class="comment">// Define the individual sprites in the image</span>
+		<span class="comment">// Each one (spr_tree, etc.) becomes a component</span>
+		<span class="comment">// These components' names are prefixed with "spr_"</span>
+		<span class="comment">//  to remind us that they simply cause the entity</span>
+		<span class="comment">//  to be drawn with a certain sprite</span>
+		Crafty.<span class="function call">sprite</span>(<span class="constant numeric">16</span>, <span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/16x16_forest_1.gif'</span>, {
+			spr_tree:    [<span class="constant numeric">0</span>, <span class="constant numeric">0</span>],
+			spr_bush:    [<span class="constant numeric">1</span>, <span class="constant numeric">0</span>],
+			spr_village: [<span class="constant numeric">0</span>, <span class="constant numeric">1</span>]
+		});
+
+		<span class="comment">// Define the PC's sprite to be the first sprite in the third row of the</span>
+		<span class="comment">//  animation sprite map</span>
+		Crafty.<span class="function call">sprite</span>(<span class="constant numeric">16</span>, <span class="string">'http://desolate-caverns-4829.herokuapp.com/assets/hunter.png'</span>, {
+			spr_player:  [<span class="constant numeric">0</span>, <span class="constant numeric">2</span>],
+		}, <span class="constant numeric">0</span>, <span class="constant numeric">2</span>);
+
+		<span class="comment">// Define our sounds for later use</span>
+		<span class="comment">//Crafty.audio.add({</span>
+		<span class="comment">//	knock: ['http://desolate-caverns-4829.herokuapp.com/assets/door_knock_3x.mp3']</span>
+		<span class="comment">//});</span>
+
+		<span class="comment">// Draw some text for the player to see in case the file</span>
+		<span class="comment">//  takes a noticeable amount of time to load</span>
+		Crafty.<span class="function call">e</span>(<span class="string">'2D, DOM, Text'</span>)
+			.<span class="function call">attr</span>({ x: <span class="constant numeric">0</span>, y: Game.<span class="function call">height</span>()/<span class="constant numeric">2</span> <span class="keyword operator">-</span> <span class="constant numeric">24</span>, w: Game.<span class="function call">width</span>() })
+			.<span class="function call">text</span>(<span class="string">'Loading...'</span>);
+
+		<span class="comment">// Now that our sprites are ready to draw, start the game</span>
+		Crafty.<span class="function call">scene</span>(<span class="string">'Game'</span>);
+	})
+});
+
+Game.<span class="function call">start</span>();</pre>
+						
+					
+				
+					
+						<div class="resources tCont" id="resources">
+							<h3>Following resources are loaded into result:</h3>
+							<ol>
+								
+									<li><a href="http://craftyjs.com/release/0.5.3/crafty.js" title="http://craftyjs.com/release/0.5.3/crafty.js">crafty.js</a></li>
+								
+							</ol>
+						</div>
+						
+					
+				
+					
+						
+							<pre data-language="html" class="html tCont  rainbow"><span class="support tag"><span class="support tag">&lt;</span><span class="support tag special">!</span><span class="support tag-name">DOCTYPE</span></span> html<span class="support tag close">&gt;</span>
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag-name">html</span></span><span class="support tag close">&gt;</span>
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag-name">head</span></span><span class="support tag close">&gt;</span>
+  <span class="source css embedded"><span class="support tag style">&lt;</span><span class="entity tag style">style</span> <span class="entity tag style">type</span>=<span class="string">"text/css"</span> <span class="entity tag style">media</span>=<span class="string">"screen"</span><span class="support tag style">&gt;</span>
+    <span class="entity name tag">body</span> { <span class="support css-property">background</span>: <span class="support css-value">black</span>; }
+  <span class="support tag style">&lt;/</span><span class="entity tag style">style</span><span class="support tag style">&gt;</span></span>
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag special">/</span><span class="support tag-name">head</span></span><span class="support tag close">&gt;</span>
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag-name">body</span></span><span class="support tag close">&gt;</span>
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag special">/</span><span class="support tag-name">body</span></span><span class="support tag close">&gt;</span>
+<span class="support tag"><span class="support tag">&lt;</span><span class="support tag special">/</span><span class="support tag-name">html</span></span><span class="support tag close">&gt;</span></pre>
+						
+					
+				
+					
+						
+							<pre data-language="css" class="css tCont  rainbow"></pre>
+						
+					
+				
+					<div class="tCont result" id="result"></div>
+						
+					
+				
+			</div>
+		</div>
+
+	  
+	    <script type="text/javascript">
+	      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	    </script><script src="ga.js" type="text/javascript"></script>
+	    <script type="text/javascript">
+	      try {
+	        var pageTracker = _gat._getTracker('UA-366077-13');
+	        pageTracker._trackPageview();
+	      } catch(err) {}
+	    </script>
+	  
+	
+
+</body></html>
