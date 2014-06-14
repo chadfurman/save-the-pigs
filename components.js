@@ -1,3 +1,4 @@
+var PIG_SPEED = 1000;
 // The Grid component allows an element to be located
 //  on a grid of tiles
 Crafty.c('Grid', {
@@ -47,7 +48,7 @@ Crafty.c('PlayerCharacter', {
     this.requires('Actor, Fourway, Collision, spr_player, SpriteAnimation')
       .fourway(4)
       .stopOnSolids()
-      .onHit('Village', this.visitVillage)
+      .onHit('Pig', this.savePig)
       // These next lines define our four animations
       //  each call to .animate specifies:
       //  - the name of the animation
@@ -93,23 +94,56 @@ Crafty.c('PlayerCharacter', {
     }
   },
 
-  // Respond to this player visiting a village
-  visitVillage: function(data) {
-    villlage = data[0].obj;
-    villlage.visit();
+  // Respond to this player saving a pig
+  savePig: function(data) {
+    pig = data[0].obj;
+    pig.save();
   }
 });
 
-// A village is a tile on the grid that the PC must visit in order to win the game
-Crafty.c('Village', {
+// A pig is a tile on the grid that the PC must 'save' in order to win the game
+Crafty.c('Pig', {
   init: function() {
-    this.requires('Actor, spr_village');
+    this.requires('Actor, Collision, spr_pig').stopOnSolids();
   },
 
-  // Process a visitation with this village
-  visit: function() {
+  movePig: function() {
+    var direction = parseInt(((Math.random() * 100) % 4));
+    switch (direction) {
+      case 0: // up
+        this.y += Game.map_grid.tile.height;
+        break;
+      case 1: // right
+        this.x += Game.map_grid.tile.width;
+        break;
+      case 2: // down
+        this.y -= Game.map_grid.tile.height;
+        break;
+      case 3:  // left
+        this.x -= Game.map_grid.tile.width;
+        break;
+    }
+
+    this.delay(this.movePig, PIG_SPEED);
+  },
+
+  // Registers a stop-movement function to be called when
+  //  this entity hits an entity with the "Solid" component
+  stopOnSolids: function() {
+    this.onHit('Solid', this.stopMovement);
+
+    return this;
+  },
+
+  // Stops the movement
+  stopMovement: function(data) {
+    console.log(data);
+  },
+
+  // Process a saved pig
+  save: function() {
     this.destroy();
     Crafty.audio.play('oink');
-    Crafty.trigger('VillageVisited', this);
+    Crafty.trigger('PigSaved', this);
   }
 });

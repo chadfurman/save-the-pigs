@@ -33,20 +33,22 @@ Crafty.scene('Game', function() {
   }
 
   // Generate up to five villages on the map in random locations
-  var max_villages = 50;
+  var max_pigs = 20;
   for (var x = 0; x < Game.map_grid.width; x++) {
     for (var y = 0; y < Game.map_grid.height; y++) {
-      if (Math.random() < 0.20) {
-        if (Crafty('Village').length < max_villages && !this.occupied[x][y]) {
-          Crafty.e('Village').at(x, y);
+      if (Math.random() < 0.05) {
+        if (Crafty('Pig').length < max_pigs && !this.occupied[x][y]) {
+          Crafty.e('Pig, Delay').at(x, y).delay(function() {
+            this.movePig(this);
+          }, 100);
         }
       }
     }
   }
 
   // Show the victory screen once all villages are visisted
-  this.show_victory = this.bind('VillageVisited', function() {
-    if (!Crafty('Village').length) {
+  this.show_victory = this.bind('PigSaved', function() {
+    if (!Crafty('Pig').length) {
       Crafty.scene('Victory');
     }
   });
@@ -54,7 +56,7 @@ Crafty.scene('Game', function() {
   // Remove our event binding from above so that we don't
   //  end up having multiple redundant event watchers after
   //  multiple restarts of the game
-  this.unbind('VillageVisited', this.show_victory);
+  this.unbind('PigSaved', this.show_victory);
 });
 
 
@@ -64,8 +66,8 @@ Crafty.scene('Game', function() {
 Crafty.scene('Victory', function() {
   // Display some text in celebration of the victory
   Crafty.e('2D, DOM, Text')
-    .attr({ x: 0, y: 0 })
-    .text('Victory!');
+    .attr({ x: 20, y: 20, w: 300, h: 100 })
+    .text('<h1>Victory!</h1><p>Save more pigs offline by going vegan!</p><h3>Press a key to play again...</h3>');
 
   // Watch for the player to press a key, then restart the game
   //  when a key is pressed
@@ -104,11 +106,10 @@ Crafty.scene('Loading', function(){
     // These components' names are prefixed with "spr_"
     //  to remind us that they simply cause the entity
     //  to be drawn with a certain sprite
-    console.log('sprite loaded...');
     Crafty.sprite(16, 'stp.png', {
       spr_tree:    [1, 1],
       spr_bush:    [0, 0],
-      spr_village: [1, 0],
+      spr_pig: [1, 0],
       spr_player:  [0, 1]
     }, 0, 0, 1);
 
